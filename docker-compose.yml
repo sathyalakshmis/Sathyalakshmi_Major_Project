@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  flask-app:
+    container_name: flask-app
+    image: sathyalakshmi/docker_project_flask-app:latest
+    restart: always
+    ports:
+      - '5000:5000'
+    volumes:
+      - ./app:/app
+    networks:
+      - backend
+
+  mysql-db:
+    container_name: mysql-db
+    image: sathyalakshmi/docker_project_flask-app:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: medical
+    ports:
+      - '32000:3306'
+    volumes:
+      - ./database:/var/lib/mysql
+    networks:
+      - backend
+
+networks:
+  backend:
+
+volumes:
+  app:
+  database:
