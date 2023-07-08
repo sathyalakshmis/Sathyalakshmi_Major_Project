@@ -1,4 +1,4 @@
-# Sathyalakshmi_Major_Project
+# Sathyalakshmi_Major_Project Wiley Cohort C361 
 Pharmacy management system using Flask Mysql and Docker Compose
 
 Dockerizing Flask and MySQL Application Using Docker Compose
